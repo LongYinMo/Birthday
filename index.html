@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>樱雨生日快乐</title>
+        <link rel="icon" href="./img/avatar.jpg" sizes="16x16">
+        
+		<link rel="stylesheet" type="text/css" href="css/start.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/cake.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/photos.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/wish.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/end.css"/>
+
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.wrap-start{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+
+			.wrap-cake {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: #ee9ca7;
+				
+				display: none;
+			}
+
+			.wrap-photos {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				display: none;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+		
+		<!-- -------------------开始页面-------------------------- -->
+        <!-- -------------------有趣，如果有人查看了我代码那我还怪不好意思的-------------------------- -->
+        <!-- -------------------还要继续看吗，主要的逻辑实现在js文件里面，这里是没有的-------------------------- -->
+		<div class="wrap-start">
+			<nav class="nav">
+				<div class="nav-content">
+					<ul class="nav-items">
+						<li class="nav-item"> <span class="item-text"> 距离生日：</span> </li>
+						<li class="nav-item"> <span class="item-text"> <span id="day"> </span> </span> </li>
+						<li class="nav-item"> <span class="item-text"> <span id="hour"></span> </span> </li>
+						<li class="nav-item"> <span class="item-text"> <span id="min"></span> </span> </li>
+						<li class="nav-item"> <span class="item-text"> <span id="sec"></span> </span> </li>
+					</ul>
+				</div>
+				<label class="nav-btn" for="menu-cb" id="navBtn">
+					<span class="btnRail"></span>
+					<span class="btnRail"></span>
+				</label>
+			</nav>
+		</div>
+
+        <!-- -------------------相片页面-------------------------- -->
+		<div class="wrap-photos">
+			<div class="container">
+				<img src="./img/ameng.jpg" class="pic1" />
+				<img src="./img/SonnyBoy.jpg" class="pic2" />
+				<img src="./img/camera.jpg" class="pic3" />
+				<img src="./img/avatar.jpg" class="pic4" />
+				<img src="./img/AT.jpg" class="pic5" />
+				<img src="./img/window.jpg" class="pic6" />
+				<img src="./img/v.jpg" class="pic7" />
+				<img src="./img/logo.jpg" class="pic8" />
+				<img src="./img/eri.jpg" class="pic9" />
+			</div>
+
+		</div>
+		<script src="js/photos.js" type="text/javascript" charset="utf-8"></script>
+          
+	  <!-- -------------------cake页面-------------------------- -->
+		<div class="wrap-cake">
+			<div class="cake">
+				<div class="cake-floor"><img src="img/cake-floor.png"></div>
+				<div class="cake-foot"><img src="img/cake-foot.png"></div>
+				<div class="cake-candle"><img src="img/cake-candle.png"></div>
+				<div class="candle-fire"></div>
+				<div class="cake-text">
+				  <h1>生日快乐!樱雨!</h1>
+				  <span>"May your days be painted in colors of joy"</span><br>
+                  <span>"May your nights be adorned with dreams that never fade."</span><br>
+                  <span>---by 吟羽墨</span>
+				</div>
+			</div>
+			
+			<div class="wish" id="endBtn">
+				<span>🎉</span><span>🎉</span><span>🎉</span><span style="font-size:26px">此处无彩蛋</span>
+			</div>
+		</div>
+		
+		
+		<!-- -------------------音频页面-------------------------- -->
+		<audio  id="audioBir" loop>
+		  <source src="./happybirthday.mp3" type="audio/mpeg">
+		</audio> 
+		
+		
+		<!------------------------------ 开始页面js 开始 -->
+		<script src="js/start.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			var endBtn = document.getElementById("endBtn");
+			endBtn.onclick = function(){
+			    wrapCake.style.display = "none";
+			    endFun();
+			}
+			
+			
+		</script>
+		
+		<!------------------------------ end页面js 开始 -->
+		<script src="js/end.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+</html>

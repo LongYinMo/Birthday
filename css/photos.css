@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #eee;
+}
+body .container {
+  width: 800px;
+  height: 450px;
+  margin: 0 auto;
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+body .container img {
+  position: absolute;
+  padding: 10px 10px 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: 1s;
+  z-index: 1; 
+  transform: scale(0.4);
+}
+body .container img:hover {
+  transform: rotate(0deg) scale(0.8);
+  box-shadow: 5px 5px 5px #dddddd;
+  z-index: 2;
+  cursor: pointer;
+}
+body .container .pic1 {
+  top: 10px;
+  left: 50px;
+  transform: rotate(-5deg) scale(0.4);
+}
+body .container .pic2 {
+  top: 10px;
+  left: 300px;
+  transform: rotate(5deg) scale(0.4);
+}
+body .container .pic3 {
+  top: 10px;
+  right: 50px;
+  transform: rotate(-8deg) scale(0.4);
+}
+body .container .pic4 {
+  top: 150px;
+  left: 50px;
+  transform: rotate(8deg) scale(0.4);
+}
+body .container .pic5 {
+  top: 150px;
+  left: 300px;
+  transform: rotate(-10deg) scale(0.4);
+}
+body .container .pic6 {
+  top: 150px;
+  right: 50px;
+  transform: rotate(12deg) scale(0.4);
+}
+body .container .pic7 {
+  top: 290px;
+  left: 50px;
+  transform: rotate(-12deg) scale(0.4);
+}
+body .container .pic8 {
+  top: 290px;
+  left: 300px;
+  transform: rotate(10deg) scale(0.4);
+}
+body .container .pic9 {
+  top: 290px;
+  right: 50px;
+  transform: rotate(-15deg) scale(0.4);
+}
+
+.wrap-photos img {
+  opacity: 0;
+  animation: opacity 2s forwards;
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  body .container {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  body .container {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  body .container {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-height: 600px) {
+  body .container {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-height: 500px) {
+  body .container {
+    transform: scale(0.7);
+  }
+}
