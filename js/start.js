@@ -88,8 +88,8 @@ function counDown() {
 		secFun();
 		
 		itemTexts[0].innerHTML = "请";
-		day.innerHTML = "点击（调小）";
-		hour.innerHTML = "这里（音量）";
+		day.innerHTML = "点击";
+		hour.innerHTML = "这里";
 		min.innerHTML = "→_→";
 		sec.style.color = "transparent";
 		sec.style.display = "block";
